@@ -8,6 +8,14 @@
 
 extern IMalloc* g_pMalloc;
 
+// Prevent min, max defines (presumably from windows.h) from std::min, std::max calls.
+#ifdef min
+#undef min
+#endif
+#ifdef max
+#undef max
+#endif
+
 //////////////
 // cMultiparm
 //////////////
