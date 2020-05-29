@@ -192,10 +192,10 @@ public:
 	double Dot(const mxs_vector& r) const;
 	cScrVec Cross(const mxs_vector& r) const;
 	double Distance(const mxs_vector& r) const;
-	static constexpr float epsilon = 0.00001f;
+	static const float epsilon;
 	static const cScrVec Zero;
 };
-
+const float cScrVec::epsilon = 0.00001f;
 
 // A cScrStr should _never_ be NULL.
 class cScrStr
